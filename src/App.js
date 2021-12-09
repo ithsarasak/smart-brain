@@ -126,7 +126,7 @@ const App = () => {
     event.preventDefault();
     setUrl(input);
     try {
-      let response = await fetch("http://localhost:3000/imageurl", {
+      let response = await fetch("https://calm-ravine-67559.herokuapp.com/imageurl", {
         method: "post",
         headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -136,7 +136,7 @@ const App = () => {
       response = await response.json();
       if (response) {
         try {
-          let userEntries = await fetch("http://localhost:3000/image", {
+          let userEntries = await fetch("https://calm-ravine-67559.herokuapp.com/image", {
             method: "put",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
